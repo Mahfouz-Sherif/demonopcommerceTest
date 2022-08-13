@@ -5,14 +5,15 @@ import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import org.example.pages.P01_register;
-import org.openqa.selenium.By;
 import org.openqa.selenium.support.ui.Select;
-import org.testng.Assert;
+import org.testng.asserts.SoftAssert;
 
 public class D01_registerStepDef {
 
     // create new object from register page
     P01_register register = new P01_register();
+    SoftAssert soft= new SoftAssert();
+
     @Given("user go to register page")
     public void register_page()
     {register.registerBtn.click();}
@@ -45,7 +46,7 @@ public class D01_registerStepDef {
 
     @And("user enter email \"test@example.com\" field")
     public void enter_email(){
-        register.EmailField.sendKeys("test@example1.com"); // this email was used as the original was registered
+        register.EmailField.sendKeys("test@example.com"); // this email was used as the original was registered
     }
 
     @And("user fills Password fields \"P@ssw0rd\" \"P@ssw0rd\"")
@@ -61,6 +62,10 @@ public class D01_registerStepDef {
 
     @Then("success message is displayed")
     public void check_success_message(){
-        Assert.assertTrue(register.registermessage.getText().contains("Your registration completed"),"The register feature functions properly");
+        String color=register.registermessage.getCssValue("color");
+        if(color.equals("green"))
+           soft.assertTrue(register.registermessage.getText().contains("Your registration completed"),"The register assertion failed");
+        soft.assertAll();
     }
+
 }
