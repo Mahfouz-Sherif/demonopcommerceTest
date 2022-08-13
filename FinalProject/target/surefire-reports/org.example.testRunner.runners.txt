@@ -1,25 +1,13 @@
 -------------------------------------------------------------------------------
 Test set: org.example.testRunner.runners
 -------------------------------------------------------------------------------
-Tests run: 20, Failures: 4, Errors: 0, Skipped: 0, Time elapsed: 218.509 s <<< FAILURE! - in org.example.testRunner.runners
-org.example.testRunner.runners.runScenario  Time elapsed: 19.676 s  <<< FAILURE!
-org.openqa.selenium.NoSuchElementException: 
-no such element: Unable to locate element: {"method":"css selector","selector":".result"}
-  (Session info: chrome=104.0.5112.81)
-For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element
-Build info: version: '4.3.0', revision: 'a4995e2c09*'
-System info: host: 'LAPTOP-EUNNNQG0', ip: '192.168.1.7', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_333'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [687b1196114abfc111b41b65954047fe, findElement {using=class name, value=result}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 104.0.5112.81, chrome: {chromedriverVersion: 104.0.5112.29 (eff877e18f76..., userDataDir: C:\Users\MAHFOU~1\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:56917}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:56917/devtoo..., se:cdpVersion: 104.0.5112.81, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
-Session ID: 687b1196114abfc111b41b65954047fe
-
-org.example.testRunner.runners.runScenario  Time elapsed: 6.797 s  <<< FAILURE!
+Tests run: 20, Failures: 3, Errors: 0, Skipped: 0, Time elapsed: 258.052 s <<< FAILURE! - in org.example.testRunner.runners
+org.example.testRunner.runners.runScenario  Time elapsed: 6.927 s  <<< FAILURE!
 java.lang.AssertionError: expected [https://demo.nopcommerce.com/nokia-lumia-1020] but found [https://demo.nopcommerce.com/]
 
-org.example.testRunner.runners.runScenario  Time elapsed: 9.987 s  <<< FAILURE!
+org.example.testRunner.runners.runScenario  Time elapsed: 9.929 s  <<< FAILURE!
 java.lang.AssertionError: expected [https://demo.nopcommerce.com/iphone-6] but found [https://demo.nopcommerce.com/]
 
-org.example.testRunner.runners.runScenario  Time elapsed: 10.45 s  <<< FAILURE!
+org.example.testRunner.runners.runScenario  Time elapsed: 9.265 s  <<< FAILURE!
 java.lang.IndexOutOfBoundsException: Index: 1, Size: 1
 
